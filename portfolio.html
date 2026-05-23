@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="portfolio.css">
+
+</head>
+<body>
+    
+  <header>
+    <nav>
+      <div class="logo">Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-container">
+
+        <div class="hero-text">
+        <h1>Hello, I'm <span>Pavlo Mazur</span></h1>
+        <p>
+        I am a 20-year-old passionate programmer and web developer focused on creating modern, responsive, and user-friendly applications.
+        </p>
+        <a href="#projects" class="btn">View Projects</a>
+        </div>
+
+        <div class="hero-image">
+        <img src="portfolio.jpg" alt="Profile">        
+        </div>
+
+    </div>
+  </section>
+
+
+  
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-text">
+    <p>
+    I am a web developer currently based in Czechia, focused on building modern, responsive, and user-friendly web applications. I enjoy working with both frontend and backend technologies and continuously improving my skills in HTML, CSS, JavaScript, React, and Node.js. I am also passionate about problem solving and often practice algorithmic thinking by solving problems in C++.
+
+    I enjoy writing clean and efficient code, learning new technologies, and building real-world projects that help me grow as a developer. My goal is to become a strong full-stack developer and create applications that deliver great user experiences.
+    </p>
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <section id="skills">
+    
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Problem Solving</h3>
+                <p>
+                Solved over 500 problems on LeetCode, Codeforces, and other platforms,
+                improving algorithmic thinking and DSA skills.
+                </p>
+                <div class="skill-card-more-container">
+                    <span class="skill-card-more">More details...</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                <p>
+                HTML, CSS, JavaScript, React.js
+                </p>
+            </div>
+            <div class="skill-card">
+                <h3>Backend</h3>
+                <p>
+                    Node.js, Express.js, REST APIs, MongoDB
+                </p>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+  </section>
+
+  <div class="skill-popup" id="skill-popup">
+      <div class="skill-close-popup" id="skill-close-popup">✕</div>
+
+      <h3>Problem Solving</h3>
+
+      <div class="code-block">
+          <h2>LeetCode</h2>
+          <img src="images/code/leetcode.png" alt="LeetCode profile screenshot">
+      </div>
+
+      <div class="code-description">
+          <p>
+            Problem-solving practice focused on algorithms and data structures using LeetCode. 
+            Solutions are mainly written in <strong>JavaScript</strong> with an emphasis on logic and efficiency.
+          </p>
+
+          <p>
+              Profile: 
+              <a href="https://leetcode.com/u/EpoXD/" target="_blank">
+                  https://leetcode.com/u/EpoXD/
+              </a>
+          </p>
+      </div>
+
+      <div class="code-block">
+          <h2>Codeforces</h2>
+          <img src="images/code/codeforces.png" alt="LeetCode profile screenshot">
+      </div>
+
+      <div class="code-description">
+          <p>
+            Competitive programming practice focused on algorithms and problem solving using Codeforces.
+            Solutions are mainly written in <strong>C++</strong> with an emphasis on performance and optimization.
+          </p>
+
+          <p>
+              Profile: 
+              <a href="https://codeforces.com/profile/EpoXD" target="_blank">
+                  https://codeforces.com/profile/EpoXD
+              </a>
+          </p>
+      </div>
+  </div>
+
+
+
+
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-container">
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <h3>Orgz.io</h3>
+
+          <p>
+          Orgz.io is a real-time multiplayer .io web game where players interact and compete in an online world built with a responsive browser-based system.
+          </p>
+
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Node js</span>
+            <span>JSON</span>
+            <span>WebSocket</span>
+            <span>Canvas API</span>
+            <span>Express js</span>
+
+
+          </div>
+
+          <div class="project-links">
+
+            <div class="skill-card-more-container">
+                <span class="skill-card-more" id="project-card-more">More details...</span>
+            </div>
+
+
+
+            <!-- <a href="#" target="_blank" class="github">
+              <img src="images/icons/github.svg"class="github-icon">
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="project-popup" id="project-popup">
+    <div class="project-close-popup" id="project-close-popup">✕</div>
+
+    <img src="images/logo.png" class="popup-image-h1">
+    <p>
+        Multiplayer browser game developed from scratch over 6 months.
+        Built with <strong>20,000+ lines</strong> of code and <strong>100+ sprites</strong>, featuring real-time multiplayer gameplay and custom
+        game systems.
+        <br><br>
+    </p>
+
+    <div class="video-container">
+        <video controls>
+            <source src="videos/gameplay.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <a href="https://orgz.io/" target="_blank" class="btn">
+        Visit orgz.io
+    </a>
+    
+    <h3>Mobs</h3>
+    <div class="mob-gallery">
+        <div class="mob-card">
+            <img src="images/mobs/baby_slime.png">
+            <span>Slime</span>
+        </div>
+        <div class="mob-card">
+            <img src="images/mobs/mushroom.png">
+            <span>Mushroom</span>
+        </div>
+        <div class="mob-card">
+            <img src="images/mobs/wolf.png">
+            <span>Wolf</span>
+        </div>
+        <div class="mob-card">
+            <img src="images/mobs/tree.png">
+            <span>Tree</span>
+        </div>
+        <div class="mob-card">
+            <img src="images/mobs/crab.png">
+            <span>Crab</span>
+        </div>
+        <div class="mob-card">
+            <img src="images/mobs/jellyfish.png">
+            <span>Jellyfish</span>
+        </div>
+        <div class="mob-card">
+            <img src="images/mobs/starfish.png">
+            <span>Starfish</span>
+        </div>
+        <div class="mob-card">
+            <img src="images/mobs/orca.png">
+            <span>Orca</span>
+        </div>
+        <div class="mob-card">
+            <img src="images/mobs/golem.png">
+            <span>Golem</span>
+        </div>
+    </div>
+
+    <h3>Mob System</h3>
+    <div class="code-block">
+        <h2>Mob Velocity</h2>
+        <img src="images/code/mob_velocity.png">
+    </div>
+    <div class="code-block">
+        <h2>Mob Configuration</h2>
+        <img src="images/code/mob_configuration.png">
+    </div>
+    <div class="code-description">
+        <p>
+            The mob system is responsible for all enemy behavior in the game.
+            It handles spawning, movement, combat logic, and interactions with players.
+        </p>
+
+        <p>
+            Each mob has its own attributes such as health, damage, speed, and AI behavior.
+            Some mobs are passive, while others actively chase and attack players.
+        </p>
+
+        <p>
+            The system is fully integrated with the multiplayer backend, ensuring that
+            all enemy actions are synchronized across all connected clients in real time.
+        </p>
+    </div>
+
+
+    <h3>Weapon</h3>
+    <div class="weapon-gallery">
+        <div class="weapon-card">
+            <img src="images/weapon/sword0.png">
+            <span>Sword 1</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword1.png">
+            <span>Sword 2</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword2.png">
+            <span>Sword 3</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword3.png">
+            <span>Sword 4</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword4.png">
+            <span>Sword 5</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword5.png">
+            <span>Sword 6</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword6.png">
+            <span>Sword 7</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword7.png">
+            <span>Sword 8</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword8.png">
+            <span>Sword 9</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword9.png">
+            <span>Sword 10</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword10.png">
+            <span>Sword 11</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword11.png">
+            <span>Sword 12</span>
+        </div>
+        <div class="weapon-card">
+            <img src="images/weapon/sword12.png">
+            <span>Sword 13</span>
+        </div>
+    </div>
+
+    <h3>Weapon System</h3>
+    <div class="code-block">
+        <h2>Weapon Hit</h2>
+        <img src="images/code/weapon_hit.png">
+    </div>
+    <div class="code-block">
+        <h2>Weapon Configuration</h2>
+        <img src="images/code/weapon_configuration.png">
+    </div>
+    <div class="code-description">
+    <p>
+        The weapon system handles all player attack logic, including hit detection,
+        damage calculation, and weapon behavior configuration.
+    </p>
+    <p>
+        The <strong>Weapon Hit</strong> function is responsible for detecting collisions
+        between weapons and entities, applying damage, and triggering effects such
+        as knockback or hit animations.
+    </p>
+
+    <p>
+        The <strong>Weapon Configuration</strong> defines each weapon’s properties such as
+        attack speed, damage values, range, and special effects, allowing easy balancing
+        and customization of different weapon types.
+    </p>
+
+    <p>
+        Together, these systems ensure responsive combat and flexible weapon design
+        that can be expanded with new mechanics in the future.
+    </p>
+
+    </div>
+
+
+    <h3>Stats</h3>
+    <img src="images/game/stats.png" class="popup-image">
+
+    
+    <h3>Gauges</h3>
+    <img src="images/game/gauges.png" class="popup-image">
+
+
+    <h3>Render</h3>
+    <div class="code-block">
+        <h2>Render Resolution</h2>
+        <img src="images/code/render_resolution.png">
+    </div>
+    <div class="code-block">
+        <h2>Render Update Loop</h2>
+        <img src="images/code/render_update_loop.png">
+    </div>
+    <div class="code-description">
+        <p>
+            The render system is responsible for drawing all game elements to the screen, including players, objects, and the environment.
+        </p>
+
+        <p>
+            It runs separately from the game logic to ensure smooth and consistent frame updates, typically based on the current frame rate.
+        </p>
+
+        <p>
+            The <strong>render resolution system</strong> controls how the game is displayed on different screen sizes, ensuring visuals stay sharp and properly scaled.
+        </p>
+
+        <p>
+            The <strong>render update loop</strong> continuously redraws the scene based on updated game states, keeping visuals synchronized with gameplay changes.
+        </p>
+
+        <p>
+            Together, these systems ensure smooth performance and visually consistent gameplay across all devices.
+        </p>
+    </div>
+
+
+    <h3>Anticheat</h3>
+    <div class="code-block">
+        <h2>Anticheat Obfuscator Input</h2>
+        <img src="images/code/obfuscator_input.png">
+    </div>
+    <div class="code-block">
+        <h2>Anticheat Obfuscator Output</h2>
+        <img src="images/code/obfuscator_output.png">
+    </div>
+    <div class="code-description">
+        <p>
+            The anticheat system is designed to protect the game from unauthorized modifications and suspicious behavior by analyzing and securing core scripts.
+        </p>
+
+        <p>
+            The <strong>obfuscator input</strong> represents the original source code before protection is applied. This version is readable and structured for development purposes.
+        </p>
+
+        <p>
+            The <strong>obfuscator output</strong> shows the processed result after obfuscation, where the code is transformed into a more complex and harder-to-understand format to prevent reverse engineering.
+        </p>
+
+        <p>
+            This system helps improve security by making it significantly more difficult for exploiters to modify or analyze the game’s internal logic.
+        </p>
+    </div>
+
+
+
+
+
+    <h3>GUI</h3>
+    <div class="code-block">
+        <h2>GUI Controller</h2>
+        <img src="images/code/gui_controller.png">
+    </div>
+    <div class="code-block">
+        <h2>GUI Layout</h2>
+        <img src="images/code/gui_layout.png">
+    </div>
+    <div class="code-block">
+        <h2>GUI Element</h2>
+        <img src="images/code/gui_element.png">
+    </div>
+    <div class="code-block">
+        <h2>Gui List Files</h2>
+        <img src="images/code/gui_list_files.png">
+    </div>
+    <div class="code-description">
+        <p>
+            The GUI system handles all in-game interface elements, including menus, panels, and interactive components. It is designed to be modular and easy to manage.
+        </p>
+
+        <p>
+            The <strong>GUI Controller</strong> manages overall interface logic, including opening, closing, and switching between different UI screens.
+        </p>
+
+        <p>
+            The <strong>GUI Layout</strong> defines how interface elements are structured and positioned on the screen to ensure a consistent user experience.
+        </p>
+
+        <p>
+            The <strong>GUI Elements</strong> represent individual UI components such as buttons, panels, and text fields, each responsible for specific interactions.
+        </p>
+
+        <p>
+            The <strong>GUI List Files</strong> system organizes and stores UI-related files, making the interface scalable and easier to maintain across the project.
+        </p>
+
+        <p>
+            Together, these systems form a flexible and modular GUI architecture that supports clean design and efficient UI management.
+        </p>
+    </div>
+
+
+    <h3>Register System</h3>
+    <img src="images/register.png" class="popup-image">
+    <h3>Login System</h3>
+    <img src="images/login.png" class="popup-image">
+
+
+    <h3>Utils</h3>
+    <div class="code-block">
+        <h2>Vector</h2>
+        <img src="images/code/utils_vector.png">
+    </div>
+    <div class="code-block">
+        <h2>Math</h2>
+        <img src="images/code/utils_math.png">
+    </div>
+
+    <div class="code-description">
+        <p>
+            The Utils module provides reusable helper functions for vector math and general calculations, improving code reusability and simplifying core systems.
+        </p>
+    </div>
+
+  </div>
+
+
+  <section id="contact">
+
+      <h2 class="section-title">Contact</h2>
+
+      <div class="contact-bottom">
+            <a href="https://www.linkedin.com/in/pavlo-mazur-80b29b411/" target="_blank" class="social-icon">
+                <img src="images/icons/linkedIn.png">
+            </a>
+            <a href="https://github.com/PavloMazurGit" target="_blank" class="social-icon">
+                <img src="images/icons/github.svg">
+            </a>
+            <a href="mailto:pavlomazur19@gmail.com" class="social-icon">
+                <img src="images/icons/gmail.png">
+            </a>
+      </div>
+
+  </section>
+
+
+  <script src="portfolio.js"></script>
+
+</body>
+
+
+</html>
