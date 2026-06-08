@@ -1,89 +1,83 @@
-const moreBtn = document.querySelector('#project-card-more');
+const projectBtn = document.querySelector('#project-more-details');
 const projectPopup = document.getElementById('project-popup');
-const projectClosePopup = document.getElementById('project-close-popup');
+const projectClose = document.getElementById('project-close-popup');
 
-const skillBtn = document.querySelector('.skill-card-more');
+const skillBtn = document.querySelector('#skill-more-details');
 const skillPopup = document.getElementById('skill-popup');
-const skillClosePopup = document.getElementById('skill-close-popup');
+const skillClose = document.getElementById('skill-close-popup');
 
-/* ================= PROJECT POPUP ================= */
+/* ================= HELPERS ================= */
 
-moreBtn.addEventListener("click", (e) => {
-    e.stopPropagation();
+function closeAllPopups() {
+    projectPopup.classList.remove('active');
+    skillPopup.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+}
 
-    const isActive = projectPopup.classList.contains("active");
+function updateBodyScroll() {
+    const anyActive =
+        projectPopup.classList.contains('active') ||
+        skillPopup.classList.contains('active');
+
+    document.body.classList.toggle('no-scroll', anyActive);
+}
+
+/* ================= TOGGLE FUNCTION ================= */
+
+function togglePopup(popupToOpen, popupToClose) {
+    const isActive = popupToOpen.classList.contains('active');
 
     if (isActive) {
-        projectPopup.classList.remove("active");
+        popupToOpen.classList.remove('active');
     } else {
-        skillPopup.classList.remove("active");
-
-        projectPopup.classList.add("active");
+        popupToClose.classList.remove('active');
+        popupToOpen.classList.add('active');
     }
 
-    document.body.classList.toggle("no-scroll",
-        projectPopup.classList.contains("active") ||
-        skillPopup.classList.contains("active")
-    );
+    updateBodyScroll();
+}
+
+/* ================= PROJECT ================= */
+
+projectBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    togglePopup(projectPopup, skillPopup);
 });
 
-projectClosePopup.addEventListener("click", () => {
-    projectPopup.classList.remove("active");
-    document.body.classList.remove("no-scroll");
+projectClose.addEventListener('click', () => {
+    projectPopup.classList.remove('active');
+    updateBodyScroll();
 });
 
-/* ================= SKILL POPUP ================= */
+/* ================= SKILL ================= */
 
 if (skillBtn) {
-    skillBtn.addEventListener("click", (e) => {
+    skillBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-
-        const isActive = skillPopup.classList.contains("active");
-
-        if (isActive) {
-            skillPopup.classList.remove("active");
-        } else {
-            projectPopup.classList.remove("active");
-
-            skillPopup.classList.add("active");
-        }
-
-        document.body.classList.toggle("no-scroll",
-            projectPopup.classList.contains("active") ||
-            skillPopup.classList.contains("active")
-        );
+        togglePopup(skillPopup, projectPopup);
     });
 }
 
-if (skillClosePopup) {
-    skillClosePopup.addEventListener("click", () => {
-        skillPopup.classList.remove("active");
-        document.body.classList.remove("no-scroll");
+if (skillClose) {
+    skillClose.addEventListener('click', () => {
+        skillPopup.classList.remove('active');
+        updateBodyScroll();
     });
 }
 
 /* ================= OUTSIDE CLICK ================= */
 
-document.addEventListener("click", (e) => {
+document.addEventListener('click', (e) => {
+    const clickedInsideProject = projectPopup.contains(e.target) || projectBtn.contains(e.target);
+    const clickedInsideSkill = skillPopup.contains(e.target) || (skillBtn && skillBtn.contains(e.target));
 
-    const clickInsideProject = projectPopup.contains(e.target);
-    const clickProjectBtn = moreBtn.contains(e.target);
-
-    const clickInsideSkill = skillPopup.contains(e.target);
-    const clickSkillBtn = skillBtn && skillBtn.contains(e.target);
-
-    if (!clickInsideProject && !clickProjectBtn) {
-        projectPopup.classList.remove("active");
+    if (!clickedInsideProject) {
+        projectPopup.classList.remove('active');
     }
 
-    if (!clickInsideSkill && !clickSkillBtn) {
-        skillPopup.classList.remove("active");
+    if (!clickedInsideSkill) {
+        skillPopup.classList.remove('active');
     }
 
-    if (
-        !projectPopup.classList.contains("active") &&
-        !skillPopup.classList.contains("active")
-    ) {
-        document.body.classList.remove("no-scroll");
-    }
+    updateBodyScroll();
 });

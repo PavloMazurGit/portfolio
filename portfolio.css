@@ -136,22 +136,24 @@ nav {
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    cursor: pointer;
     background: #0ea5e9;
 }
 
 .hero-image {
-    flex: 1;
     display: flex;
+    width: 250px;
+    height: 250px;
     justify-content: center;
 }
 
 .hero-image img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #38bdf8;
+
 }
 
 /* ABOUT SECTION */
@@ -180,6 +182,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    
 }
 
 .skill-card-more-container {
@@ -187,33 +190,33 @@ nav {
 }
 
 .skill-card {
-    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+    background: #1a1919;
+    height: 225px;
     padding: 1.5rem;
     border-radius: 14px;
-    border: 3px solid transparent;
+    border: 1px solid #1f2937;
     transition: all 0.3s ease;
     width: 100%;
-    height: 100%;
 
 }
 
 .skill-card:hover {
-    transform: translateY(-6px);
-    border: 3px solid #38bdf8;
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
 }
 
 .skill-card h3 {
     margin: 0 0 0.6rem;
     font-size: 1.2rem;
-    color: #0f172a;
+    color: white;
     font-weight: 1000;
 }
 
 .skill-card p {
-    margin: 0;
+    margin-bottom: 20px;
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #334155;
+    color: #9A9A9A;
 }
 .skill-card-more {
     display: block;
@@ -234,10 +237,6 @@ nav {
     transform: scale(0.85); 
 }
 
-.skill-card:hover {
-    box-shadow: 0 0 12px #38bdf8;
-    transition: all 0.3s ease;
-}
 
 /* SKILL POPUP */
 
@@ -317,7 +316,7 @@ nav {
 
 
 .project-card {
-    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+    background: #1a1919;
     padding: 25px;
     border-radius: 18px;
     transition: 0.3s ease;
@@ -331,12 +330,12 @@ nav {
 
 .project-card h3 {
     margin-bottom: 12px;
-    color: black;
+    color: white;
     font-weight: 1000;
 }
 
 .project-card p {
-    color: #334155;
+    color: #9A9A9A;
     line-height: 1.6;
     margin-bottom: 18px;
 }
@@ -350,16 +349,17 @@ nav {
 
 .project-tech span {
     padding: 6px 12px;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 4px;
     font-size: 0.85rem;
     font-weight: 1000;
-    color: black;
+    color: white;
 }
 
 .project-links {
     display: flex;
-    gap: 15px;
+    align-items: center;
+    width: 100%;
 }
 
 .project-links a {
@@ -605,6 +605,40 @@ nav {
     transform: scale(0.95);
 }
 
+.lock-icon {
+    margin-left: auto;   
+    position: relative; 
+}
+
+.lock-icon svg {
+    width: 50px;
+    height: 50px;
+}
+
+.tooltip {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 110%;
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+
+    pointer-events: none;
+}
+
+.lock-icon:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* CONTACT SECTION */
 
 .contact-bottom {
@@ -614,15 +648,20 @@ nav {
     gap: 20px;
 }
 
-.social-icon img {
-    border: 4px solid rgb(255, 255, 255);
-    border-radius: 25%;
-    width: 60px;
-    height: 60px;
-    transition: 0.3s;
-    background-color: white;
+.social-icon {
+    color: white;
+    background-color: black;
 }
 
-.social-icon img:hover {
-    transform: translateY(-5px) scale(1.1);
+.social-icon svg {
+    border: 2px solid white;
+    border-radius: 25%;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.social-icon svg:hover {
+    color: #38bdf8;
+    border-color: #38bdf8;
 }
